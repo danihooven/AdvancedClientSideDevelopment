@@ -1,0 +1,165 @@
+<html ng-app="myApp">
+	<!--
+	This is the HTML for the homework problem. It may not be edited
+	-->
+
+	<head>
+		<title>Homework #12</title>
+		<link rel="stylesheet" type="text/css" href="homework.css">
+		<!-- Latest compiled and minified CSS -->
+		<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+
+		<!-- jQuery library -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+		<!-- Latest compiled JavaScript -->
+		<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+		<!-- AngularJS Library -->
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.9/angular.min.js"></script>
+
+		<!-- AngularJS Route  -->
+		<script src="//code.angularjs.org/1.5.9/angular-route.min.js"></script>
+
+		<!-- Angular Script -->
+		<script src="app.js"></script>
+
+		<style>
+		.glyphicon-remove{
+			color:pink;
+		}
+		.glyphicon-remove:hover{
+			color:red;
+			cursor:pointer;
+		}
+		</style>
+	</head>
+
+	<body ng-controller="TodoController as todoCtrl">
+
+		<div class="container">
+			<div id="header">
+				<h1>Homework #12</h1>
+				<p>
+					WEBD 335 &#8213; Dani Hooven
+				</p>
+				<div id="instructions">
+					<p>
+						<strong>Instructions:</strong> Follow the instructions below for each Problem (you can write the Javascript in this HTML file directly and return it) and Answer each Question completely (in another document).
+					</p>
+				</div>
+
+				<fieldset>
+					<h2>Problem 1 &#8213; AngularJS Routes </h2>
+					<p class="question">
+						<strong>[20 points]</strong> For this Homework you will extend what you did in Homework 11 to create a route for each individual Todo (row) so that you can link to show a detail view for that individual Todo.						
+					</p>
+					<p>
+						The two requirements are 
+						<ul>
+							<li>Create a new View (todo.html) for the single Todo item; that displays the Todo in a different layout than a table row (some type of Grid layout of a single todo item would be good)</li>
+							<li>define that new View so that it is available as a route with a todo id parameter. (.ie /todo/:todoId)  Use this example as a starting template for applying a Route and a View to your Todo Table./li>
+							<li><a href="http://plnkr.co/edit/MxJkCpJDKXDNyYc1web8?p=preview">Click Here for Plnkr Demo</a></li>
+							<li>Submit the HTML files</li>
+						</ul>
+					</p>
+					
+					<!-- To Do Table  -->
+					<table class="table table-striped" ng-show="todoCtrl.todoItems.length">
+						<thead>
+							<tr>
+								<th scope="col">Todo Name</th>
+								<th scope="col">Desc</th>
+								<th scope="col">Date</th>
+								<th scope="col"></th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr ng-repeat="todoItem in todoCtrl.todoItems">
+								<td>{{todoItem.name}}</td>
+								<td>{{todoItem.desc}}</td>
+								<td>{{todoItem.date}}</td>
+								<td>
+									<span><a href="#Edit" class="glyphicon glyphicon-edit" aria-hidden="true"></a></span>
+									<span class="glyphicon glyphicon-remove" aria-hidden="true"
+										ng-click="todoCtrl.removeItem($index)"></span>
+								</td>
+							</tr>
+						</tbody>
+					</table>					
+
+					<!-- This doesn't work!! -->
+					<div ng-view></div>
+					
+					<!-- To Do Form  -->
+					<form name="todoCtrl.todoForm">
+						<div class="form-row">
+							<!-- To Do Name  -->
+							<div class="form-group">
+								<label for="todo-name">Short Name</label>
+								<input type="text" required class="form-control" id="todo-name" ng-model="newToDo.todoName">
+							</div>
+							<!-- To Do Description  -->
+							<div class="form-group">
+								<label for="todo-desc">Description</label>
+								<textarea type="text" class="form-control" id="todo-desc" rows="4" ng-model="newToDo.todoDesc"></textarea>
+							</div>
+							<!-- Add To Do  -->
+							<button class="btn btn-primary pull-right" ng-click="todoCtrl.addItem(newToDo)">Add Todo</button>
+						</div>
+					</form>
+
+				</fieldset>
+
+
+
+				<fieldset>
+					<h2>Question 1</h2>
+					<p class="question">
+						<strong>[1 point]</strong>
+						What two events are used in AngularJS to listen to when a route is changing from one route to another?
+					</p>
+					<textarea placeholder="$routeChangeStart and $routeChangeSuccess events"></textarea>
+
+
+				</fieldset>
+
+				<fieldset>
+					<h2>Question 2</h2>
+					<p class="question">
+						<strong>[1 point]</strong>
+						In AngularJS where are parameters stored before injected into and available to the controller?
+					</p>
+					<textarea placeholder="Stored in the cache"></textarea>
+				</fieldset>
+
+				<fieldset>
+					<h2>Question 3</h2>
+					<p class="question">
+						<strong>[1 point]</strong>
+						Describe what ng-view does.
+					</p>
+					<textarea placeholder="ngView is a directive that complements the $route service by including the rendered template of the current route into the main layout (index.html) file. Every time the current route changes, the included view changes with it according to the configuration of the $route service."></textarea>
+				</fieldset>
+
+				<fieldset>
+					<h2>Question 4</h2>
+					<p class="question">
+						<strong>[1 point]</strong>
+						List the AngularJS five animation events.
+					</p>
+					<textarea placeholder="enter, leave, move, addClass, removeClass"></textarea>
+				</fieldset>
+				<fieldset>
+					<h2>Question 5</h2>
+					<p class="question">
+						<strong>[1 point]</strong>
+						Describe the $routeProvider.when method.
+					</p>
+					<textarea placeholder="Adds a new route definition to the $route service."></textarea>
+				</fieldset>
+
+			</div>
+		</div>
+
+	</body>

@@ -1,0 +1,63 @@
+/* Spacing */
+.pad_top {
+    padding-top: .5rem;
+}
+
+/* Navigation  */
+.pages {
+    background-color: rgb(39, 39, 39);
+    color: white;
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.pages > ul > li {
+    border: 0;
+    background-color: transparent;
+}
+
+
+
+/* Animation */
+/* https://css-tricks.com/different-approaches-for-creating-a-staggered-animation/ */
+
+
+/* Screen < Medium 767*/
+@media screen and (max-width:767px) {
+    @keyframes animateSide {
+        0% {
+            opacity: 0;
+            transform: scale(0.6) translate(-8px);
+        }
+        100% {
+            opacity: 1;
+        }
+    }  
+    
+    .pages > ul > li {
+        animation: animateSide 350ms ease-in-out calc(var(--animation-order) * 100ms) 1 normal both;
+    }
+}
+
+/* Screen >= Medium 768 */
+@media screen and (min-width:768px) {
+    @keyframes animateTop {
+        0% {
+            opacity: 0;
+            transform: scale(0.6) translate(-8px);
+        }
+        100% {
+            opacity: 1;
+        }
+    } 
+
+    .pages > ul > li {
+        animation: animateTop 350ms ease-in-out calc(var(--animation-order) * 100ms) 1 normal both;
+    }
+}
+
+
+
+
+
+

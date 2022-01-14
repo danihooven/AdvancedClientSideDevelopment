@@ -1,0 +1,11 @@
+As we extend the dashboard design from Lab 1, meet the following requirements within your Lab 1 dashboard using HTML, CSS, Bootstrap and Javascript:
+
+a.  Use a Bootstrap Jumbotron
+b.  Use at least one Boostrap List Group with Glyphicons
+d.  Use an example of Pagination
+e.  Use at least one Bootstrap Label. * Not called labels since v4. See badge.
+f.  Create an array of Javascript Objects that represents the repeated content on your dashboard (a table, where each row is equivalent to a Javascript Object)
+g.  Use the Constructor Invocation Pattern, and Write four "public method" functions to create (new Object constructor), read (find Object in global array), update (push changed Object values back into global Array), and delete (delete Object from global Array) functions for the Javascript Object you defined.  Set the functions on the prototype and to have them available to every object instance.
+c.  Use at least two Bootstrap Alerts.
+
+Feel free to change your Lab 1 structure and navigation however you would like.  But, make sure that you meet all of the objectives listed above for Lab 2.

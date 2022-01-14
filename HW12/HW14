@@ -1,0 +1,13 @@
+AngularJS Routes
+
+For this Homework you will extend what you did in Homework 11 to create a route for each individual Todo (row) so that you can link to show a detail view for that individual Todo.  The two requirements are 1) Create a new View (todo.html) for the single Todo item; that displays the Todo in a different layout than a table row (some type of Grid layout of a single todo item would be good) and 2) define that new View so that it is available as a route with a todo id parameter. (.ie /todo/:todoId)  Use this example as a starting template for applying a Route and a View to your Todo Table..  http://plnkr.co/edit/MxJkCpJDKXDNyYc1web8?p=preview  (20 pts)  (Submit the HTML files)
+
+1.  What two events are used in AngularJS to listen to when a route is changing from one route to another? (1pt)
+
+2.  In AngularJS where are parameters stored before injected into and available to the controller? (1pt)
+
+3.  Describe what ng-view does. (1pt) 
+
+4.  List the AngularJS five animation events. (1pt)
+
+5.  Describe the $routeProvider.when method. (1pt)

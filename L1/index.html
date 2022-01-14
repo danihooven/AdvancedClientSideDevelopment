@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="styles.css">
+  
+  <title>Lab 2</title>
+</head>
+<body>
+
+  <!-- Learned this from... https://www.tutorialrepublic.com/codelab.php?topic=bootstrap&file=nested-columns -->
+
+  <div class="container-fluid">
+    <div class="row">
+      <!-- Nav Grid -->
+      <!-- Pages Navigation -->
+      <div class="col-2 col-sm-2 col-md-12 pad_top pages">
+          <ul class="list-group list-group-horizontal-md">
+            <li class="list-group-item" style="--animation-order: 1;">Page 1</li>
+            <li class="list-group-item" style="--animation-order: 2;">Page 2</li>
+            <li class="list-group-item" style="--animation-order: 3;">Page 3</li>
+            <li class="list-group-item" style="--animation-order: 4;">Page 4</li>
+            <li class="list-group-item" style="--animation-order: 5;">Page 5</li>
+          </ul>
+      </div>
+
+      <!-- To Do / Form Grid -->
+      <div class="col-10 col-sm-10 col-md-12">
+        
+        <div class="row">
+          <!-- To Do List -->
+          <div class="col-sm pad_top">
+            <h2 class="h2">To Do List</h2>
+            <table class="table table-striped">
+              <tbody>
+                <tr>
+                  <th scope="col">#</th>
+                  <th scope="col">Date</th>
+                  <th scope="col">Comment</th>
+                  <th scope="col">Status</th>
+                </tr>
+                <tr>
+                  <td>1</td>
+                  <td>Test Cell 1</td>
+                  <td>Test Cell 1</td>
+                  <td>Test Cell 1</td>
+                </tr>
+                <tr>
+                  <td>2</td>
+                  <td>Test Cell 2</td>
+                  <td>Test Cell 2</td>
+                  <td>Test Cell 2</td>
+                </tr>
+                <tr>
+                  <td>3</td>
+                  <td>Test Cell 3</td>
+                  <td>Test Cell 3</td>
+                  <td>Test Cell 3</td>
+                </tr>
+                <tr>
+                  <td>4</td>
+                  <td>Test Cell 4</td>
+                  <td>Test Cell 4</td>
+                  <td>Test Cell 4</td>
+                </tr>
+                <tr>
+                  <td>5</td>
+                  <td>Test Cell 5</td>
+                  <td>Test Cell 5</td>
+                  <td>Test Cell 5</td>
+                </tr>
+                <tr>
+                  <td>6</td>
+                  <td>Test Cell 6</td>
+                  <td>Test Cell 6</td>
+                  <td>Test Cell 6</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <div class="row">
+          <!-- Entry Form  -->
+          <div class="col-sm pad_top">
+            <h2 class="h2">Action Items</h2>
+            <form action="">
+              <!-- To Do Item -->
+              <div class="form-group">
+                <label for="toDoItem" class="form-label">To Do Item</label>
+                <input type="text" class="form-control" id="inputToDo" placeholder="To Do Item">
+              </div>
+              <!-- Date -->
+              <div class="form-group">
+                <label for="date" class="form-label">Date</label>
+                <input type="date" class="form-control" id="inputDate" placeholder="">
+              </div>
+              <!-- Comment -->
+              <div class="form-group">
+                <label for="comment" class="form-label">Comment</label>
+                <textarea class="form-control" name="comment" id="inputComment" rows="3"></textarea>
+              </div>
+              <!-- Status -->
+              <div class="form-group">
+                <label for="status" class="form-label">Status</label>
+                <select class="custom-select" name="status" id="inputStatus">
+                  <option value="defined">Defined</option>
+                </select>
+              </div>
+              <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    
+
+
+   
+
+
+
+  </div>
+</body>
+</html>

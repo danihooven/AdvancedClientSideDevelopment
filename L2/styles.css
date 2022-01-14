@@ -1,0 +1,145 @@
+/* Spacing */
+.pad_top {
+    padding-top: .5rem;
+}
+
+h2 {
+    margin-top: 3rem;
+}
+
+
+
+
+/* Navigation  */
+.navigation {
+    background-color: rgb(39, 39, 39);
+    color: white;
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.navigation > ul > li {
+    border: 0;
+    background-color: transparent;
+}
+
+.list-group-item a {
+    color: white;
+}
+
+.list-group-item a:hover {
+    filter: brightness(50%);
+}
+
+.notify {
+    font-size: .4rem;
+    color: white;
+    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+    margin-left: -3px;
+    margin-top: 1px;
+}
+
+
+
+
+/* Dashboard */
+.dashboard {
+    padding-left: 2rem;
+    padding-right: 2rem;
+}
+
+
+
+
+/* Jumbotrong and Pagination  */
+.page-link {
+  background-color: transparent;
+}
+
+.jumbo_image {
+    max-height: 50%;
+    /* max-width: 50%; */
+    border-radius: 10%;
+}
+
+.jumbotron {
+    text-align: center;
+    background-color: #fff;
+}
+
+
+/* Alerts  */
+.alert {
+    font-size: 1rem;
+}
+
+
+/* Animation */
+/* https://css-tricks.com/different-approaches-for-creating-a-staggered-animation/ */
+
+/* Small Screen < Medium 767*/
+@media screen and (max-width:767px) {
+    @keyframes animateSide {
+        0% {
+            opacity: 0;
+            transform: scale(0.6) translate(-8px);
+        }
+        100% {
+            opacity: 1;
+        }
+    }  
+    
+    .navigation > ul > li {
+        animation: animateSide 350ms ease-in-out calc(var(--animation-order) * 100ms) 1 normal both;
+    }
+
+    .list-group-item {
+        text-align: center;
+    }
+
+    .jumbotron, #ToDoList, #AddItem {
+        height: 95vh;
+    }
+
+    .container-fluid {
+        padding-left: 0;
+    }
+
+    #ToDoList {
+        font-size: small;
+    }
+
+    .navigation {
+        margin-bottom: -3rem;
+        
+    }
+
+}
+
+/* Large Screen >= Medium 768 */
+@media screen and (min-width:768px) {
+    @keyframes animateTop {
+        0% {
+            opacity: 0;
+            transform: scale(0.6) translate(-8px);
+        }
+        100% {
+            opacity: 1;
+        }
+    } 
+
+    .navigation > ul > li {
+        animation: animateTop 350ms ease-in-out calc(var(--animation-order) * 100ms) 1 normal both;
+    }
+
+    .jumbotron, #ToDoList, #AddItem {
+        height: 85vh;
+    }
+
+}
+
+
+
+
+
+

@@ -1,0 +1,19 @@
+Create HTML interactions with navigation and transition/animations.  Here are two examples, you can recreate these exactly or you can come up with your own, but your example must meet each of the following objectives:
+
+Build Your Dashboard
+
+
+Create the “Todo List” and “Action Item Update” User Interface with HTML/CSS and Bootstrap that has at least the following:
+
+
+a. use the grid layout for your dashboard
+b. a responsive s​idebar vertical layout​navigation drawer for smaller device widths, and a t​op​ h​orizontal layout h​eader for larger device widths
+c. use a animation or transition for the navigation when the browser width increases and decreases.
+d. use at least one table with striped rows (alternating colors)
+e. use at least one styled form, with at least four controls and button for submission
+f. declare at least one mixin with a preprocessor; if you don’t use it that is fine. (but you must implement at least one mixin). Please specify the mixin that you define, with a comment as part of your submission.
+
+https://youtu.be/Lit98Vj_1bs
+
+https://youtu.be/up5mBsF2nxA
+
