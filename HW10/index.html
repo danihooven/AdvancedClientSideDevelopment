@@ -1,0 +1,85 @@
+<html ng-app="homework">
+<!--
+ This is the HTML for the homework problem. It may not be edited
+-->
+
+<head>
+  <title>Homework #10</title>
+  <link rel="stylesheet" type="text/css" href="homework.css">
+
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular-route.js"></script>
+
+</head>
+
+<body>
+
+  <div class="container">
+    <div id="header">
+      <h1>Homework #10</h1>
+      <p>WEBD 335 &#8213; Dani Hooven</p>
+      <div id="instructions">
+        <p>
+          <strong>Instructions:</strong> Follow the instructions below for each Problem (you can write the Javascript in this HTML file directly and return it) and Answer each Question completely (in another document).
+        </p>
+      </div>
+
+  <fieldset>
+    <h2>Problem 1 &#8213; AngularJS Angello Running Locally</h2>
+    <p class="question"><strong>[15 points]</strong> Setup the <a href="https://github.com/angularjs-in-action/angello">Angello App</a> (https://github.com/angularjs-in-action/angello) locally (you can use Firebase as the data store), add two cards to the board with your name on them take a screenshot and submit that as the homework; include in the screen shot the view of the RESULT JSON array of objects and one of the card objects expanded like the following screenshot.</p>
+    <img style="width:100%" src="screenshot.png" />
+    <p style="color: red; font-size: x-large;"><strong>Angello is outdated and no longer works. There is no additional support. This problem cannot be completed. Professor Watson knows.</strong></p>
+
+  </fieldset>
+
+  <fieldset>
+    <h2>Question 1</h2>
+    <p class="question"><strong>[2 point]</strong>
+      What is a module in AngularJS and what is the attribute added to the HTML to declare it?
+    </p>
+      <textarea placeholder="Modules in AngularJS serve as containers to help you organize your application into logical units. Modules tell AngularJS how an application is configured and how it’s supposed to behave."></textarea>
+
+  </fieldset>
+
+  <fieldset>
+    <h2>Question 2</h2>
+    <p class="question"><strong>[2 point]</strong>
+      Describe how AngularJS uses ViewModel and why this is different than the way JQuery works?
+    </p>
+    <textarea placeholder="Using a ViewModel inverts the application flow that traditionally existed in jQuery-style applications. In jQuery, you would’ve queried the DOM and attached an event listener. By introducing a ViewModel, you’re able to break this relationship. The controller no longer is responsible for listening to the view, but rather the view is responsible for issuing specific commands to the controller that it operates on."></textarea>
+  </fieldset>
+
+  <fieldset>
+    <h2>Question 3</h2>
+    <p class="question"><strong>[2 point]</strong>
+      When should an AngularJS Service be used?
+    </p>
+    <textarea placeholder="It’s a service to the application, and one or more of these services may contain the model on which the application relies for its data. We’ll refer to any service that communicates with a remote service and manages that state as a model."></textarea>
+  </fieldset>
+
+  <fieldset>
+    <h2>Question 4</h2>
+    <p class="question"><strong>[2 point]</strong>
+      What are the two common approaches to structuring an AngularJS application?  Describe them.
+    </p>
+    <textarea placeholder="There are two common approaches to structuring an AngularJS application—by type or by feature. For example, if you were to organize your files by type, you’d put all your controllers in a folder, all your services in a folder, and so forth. If you’re organizing by feature, you’ll put all of the files that support a single feature in that directory. "></textarea>
+  </fieldset>
+  <fieldset>
+    <h2>Question 5</h2>
+    <p class="question"><strong>[2 point]</strong>
+      Provide an example of a AngularJS declared route configuration with a controller.
+    </p>
+    <textarea placeholder="angular.module('Angello.User')
+    .controller('UserCtrl',
+        function ('$routeParams') {
+            var myUser = this;
+
+            myUser.userId = $routeParams['userId'];
+        });"></textarea>
+  </fieldset>
+
+
+</div>
+</div>
+</body>
