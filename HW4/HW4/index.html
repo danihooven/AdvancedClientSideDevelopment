@@ -1,0 +1,195 @@
+<html>
+<!--
+ This is the HTML for the homework problem. It may not be edited
+-->
+
+<head>
+  <title>Homework #4</title>
+  <link rel="stylesheet" type="text/css" href="homework.css">
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+
+  <!-- Optional theme -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+
+  <!-- Latest compiled and minified JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+
+  <div class="container">
+    <div id="header">
+      <h1>Homework #4</h1>
+      <p>WEBD 335 &#8213; Pete Gordon</p>
+      <div id="instructions">
+        <p>
+          <strong>Instructions:</strong> Follow the instructions below for each Problem (you can write the HTML in the HTML file directly and return it) and Answer each Question completely (in another document).
+        </p>
+      </div>
+
+  <fieldset>
+    <h2>Problem 1 &#8213; Bootstrap Components</h2>
+    <p class="question"><strong>[10 points]</strong> Create the following using Bootstrap Components.</p>
+    <img src="prob1.gif" />
+    <br />
+    <br />
+    <div class="prob1">
+
+      <!-- Problem 1 HTML and Bootstrap Answer Here -->
+
+      <div class="img-rounded" style="background-color: #9dd0fa;">
+        <ul class="nav nav-tabs nav-pills">
+          <!-- ToDo Item -->
+          <li class="dropdown">
+            <a href="#" data-toggle="dropdown" class="dropdown-toggle"> 
+              <span class="glyphicon glyphicon-ok"> </span> 
+              ToDo Item 
+              <b class="caret"></b>
+            </a>
+            <!-- Drop Down -->
+            <ul class="dropdown-menu">
+              <li>
+                <a href="#">
+                  <span class="glyphicon glyphicon-plus"></span> 
+                  Add
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <span class="glyphicon glyphicon-pencil"> </span> 
+                  Edit
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <span class="glyphicon glyphicon-remove"> </span> 
+                  Delete
+                </a>
+              </li>
+              <li class="divider"></li>
+              <li>
+                <a href="#">
+                  <span class="glyphicon glyphicon-search"> </span>
+                  Search
+                </a>
+              </li>
+            </ul>
+          </li>
+          <!-- My ToDo's -->
+          <li class="">
+            <a href="#"> 
+              <span class="glyphicon glyphicon-user"> </span> My ToDo's
+            </a>
+          </li>
+          <!-- Settings -->
+          <li class="">
+            <a href="#"> 
+              <span class="glyphicon glyphicon-cog"> </span> Settings 
+            </a>
+          </li>
+        </ul>
+      </div>
+      <br><br><br><br><br><hr>
+
+
+    </div>
+
+
+
+
+
+  </fieldset>
+
+  <fieldset>
+    <h2>Problem 2 &#8213; Bootstrap Components and Plugins</h2>
+    <p class="question"><strong>[10 points]</strong> Create the following using Bootstrap Components.</p>
+      <img src="prob2.gif"/>
+      <br />
+      <br />
+      <div class="prob2">
+
+        <!-- Problem 2 HTML and Bootstrap Answer Here -->
+
+        <div class="panel-group" id="accordion">
+          <!-- Take out the Trash -->
+          <div class="panel panel-success">
+            <div class="panel-heading">
+              <h4 class="panel-title">
+                <a data-toggle="collapse" href="#packtpubcollapse1">
+                  Take out the Trash
+                  <b class="caret"></b>
+                </a>
+              </h4>
+            </div>
+            <!-- Trash Body -->
+            <div id="packtpubcollapse1" class="panel-collapse collapse in">
+              <div class="panel-body">
+                <p>The trash is piling up. Please take it to the curb. Thanks.</p>
+              </div>
+            </div>
+          </div>
+          <!-- Give the Dog a Bath -->
+          <div class="panel panel-primary">
+            <div class="panel-heading">
+              <h4 class="panel-title">
+                <a data-toggle="collapse" href="#packtpubcollapse2">
+                  Give the Dog a Bath
+                  <b class="caret"></b>
+                </a>
+              </h4>
+            </div>
+            <!-- Bath Body -->
+            <div id="packtpubcollapse2" class="panel-collapse collapse">
+              <div class="panel-body">
+                <p>Tiger gets dirty so easily. He needs a bath, and don't forget behind the ears.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <br />
+      <br />
+      <hr>
+
+
+  </fieldset>
+
+  <fieldset>
+    <h2>Question 1</h2>
+    <p class="question"><strong>[1 point]</strong>
+      Which bootstrap component is used to convey crucial messages for situations where the website users have to be warned, informed, or cautioned?
+    </p>
+      <textarea placeholder="Alerts"></textarea>
+
+  </fieldset>
+
+  <fieldset>
+    <h2>Question 2</h2>
+    <p class="question"><strong>[1 point]</strong>
+      Which bootstrap component gives you the power to generate portions of self-contained bars, which could be used as whole-application headers?
+    </p>
+    <textarea placeholder="NavBar"></textarea>
+  </fieldset>
+
+  <fieldset>
+    <h2>Question 3</h2>
+    <p class="question"><strong>[1 point]</strong>
+      Describe what a Modal is and how it is used?
+    </p>
+    <textarea placeholder="A modal is a type of a dialog box that provides crucial information to your website users or educates the users prior to taking any decisive action on the website. A modal can be a confirmation, a warning, an informative dialog, or a dialog with a form that asks for some information from the user or something mundane, such as a login dialog for session timeout; for example, you are about to erase important data or click on a malicious link. "></textarea>
+  </fieldset>
+
+  <fieldset>
+    <h2>Question 4</h2>
+    <p class="question"><strong>[2 point]</strong>
+      Does Bootstrap require JQuery?  Explain why or why not.
+    </p>
+    <textarea placeholder="Bootstrap does not require jQuery but most plugins do."></textarea>
+  </fieldset>
+
+</div>
+</div>
+</body>

@@ -1,0 +1,42 @@
+/*
+ * Put your solution to problem 1 here
+ */
+
+/* #dialPad {
+    background-color: aqua;
+} */
+
+.row {
+    width: 275px;
+    text-align: center;
+    clear: both;
+    background-color: white;
+    overflow: auto;
+}
+
+.cell {
+    float: left;
+    margin: 10px;
+    width: 70px;
+    height: 70px;
+    line-height: 70px;
+    font-size: 1.4rem;
+    border-radius: 15px;
+}
+
+.row:nth-child(2) .cell{
+    background-color: orange;
+}
+
+.cell:nth-child(odd){
+    background-color: red;
+}
+
+.cell:nth-child(even){
+    background-color: green;
+}
+
+
+.cell.empty {
+    background-color: transparent;
+}

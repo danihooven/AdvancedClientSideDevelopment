@@ -1,0 +1,19 @@
+/*
+ * Put your solution to problem 2 here
+ */
+
+.item {
+    padding-bottom: 15px;
+    float: none;
+}
+
+ @media screen and (min-width: 500px) {
+    .item {
+        float: left;
+        padding-right: 20px;
+    }
+ }
+
+
+
+
