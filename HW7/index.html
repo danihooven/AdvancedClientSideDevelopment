@@ -1,0 +1,145 @@
+<html>
+<!--
+ This is the HTML for the homework problem. It may not be edited
+-->
+
+<head>
+  <title>Homework #7</title>
+  <link rel="stylesheet" type="text/css" href="homework.css">
+
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<style>
+.box{
+  width: 50px;
+  height: 50px;
+  margin: 20px;
+  background-color:blue;
+}
+</style>
+</head>
+
+<body>
+
+  <div class="container">
+    <div id="header">
+      <h1>Homework #7</h1>
+      <p>WEBD 335 &#8213; Dani Hooven</p>
+      <div id="instructions">
+        <p>
+          <strong>Instructions:</strong> Follow the instructions below for each Problem (you can write the Javascript in this HTML file directly and return it) and Answer each Question completely (in another document).
+        </p>
+      </div>
+
+  <fieldset>
+    <h2>Problem 1 &#8213; JQuery Insert and Remove</h2>
+    <p class="question"><strong>[10 points]</strong> Given the following HTML structure; write JQuery to on the click of #prob1 .box.first, clone #prob1 .box.second element, remove the .box.second element, then remove the 'second' class from the cloned element, add the 'second-and-half' class, change the background-color to green using jQuery css, and insert the cloned element after the .box.first element. Write a console.log after each line of code, stating what just happened.  (Note: review JQuery 'on' function for bindings) Also, be sure to write your code so it only works with #prob1 and does not accidently pick up elements from prob2.</p>
+
+
+    <br />
+    <br />
+
+    <div id="prob1">
+      <div class="box first"></div>
+      <div class="box second"></div>
+      <div class="box third"></div>
+    </div>
+
+    <script>
+
+    // PROBLEM 1 - jQuery Insert and Remove 
+    // on the click of #prob1.box.first
+    $('#prob1 .box.first').on('click', function(){
+      
+      // clone #prob1 .box.second element, insert the cloned element after the .box.first element.
+      $("#prob1 .box.second").clone().insertAfter("#prob1 .box.first");
+      console.log("clone #prob1 .box.second element, insert the cloned element after the .box.first element.");
+      
+      //  remove the.box.second element 
+      $("#prob1 div:nth-child(3)").remove();
+      console.log("remove the.box.second element");
+      
+      // remove the 'second' class from the cloned element, add the 'second-and-half' class, change the background - color to green using jQuery css
+      $("#prob1 div:nth-child(2)").removeClass("second").addClass("second-and-half").css("background-color", "green");
+      console.log("remove the 'second' class from the cloned element, add the 'second-and-half' class, change the background - color to green using jQuery css");
+    });
+      
+    </script>
+
+  </fieldset>
+
+  <fieldset>
+    <h2>Problem 2 &#8213; JQuery Find and Closest Functions</h2>
+    <p class="question"><strong>[10 points]</strong> Given the below HTML structure; use JQuery closest and find to go from the childOfSecond element to the third element and change its background color to orange when the second element is clicked.</p>
+      <br />
+      <br />
+      <div id="prob2">
+        <div class="box first">
+        </div>
+        <div class="box second">
+          <div class="child-of-second"></div>
+        </div>
+        <div class="box third">
+        </div>
+      </div>
+
+      <script>
+      // PROBLEM 2 - jQuery Find and Closest Functions
+      // use JQuery closest and find to go from the childOfSecond element to the third element and change its background color to orange when the second element is clicked
+      $('#prob2 .box.second').on('click', function(){
+        var childOfSecond = $('.child-of-second');
+        console.log("clicked second");
+        childOfSecond.closest("#prob2").find(".box.third").css("background-color", "orange");
+      });
+      </script>
+      <br />
+      <br />
+
+
+  </fieldset>
+
+  <fieldset>
+    <h2>Question 1</h2>
+    <p class="question"><strong>[1 point]</strong>
+      Explain and Give an example of using jquery each function.
+    </p>
+      <textarea placeholder='The .each() method is designed to make DOM looping constructs concise and less error-prone. When called it iterates over the DOM elements that are part of the jQuery object. Each time the callback runs, it is passed the current loop iteration, beginning from 0. More importantly, the callback is fired in the context of the current DOM element, so the keyword this refers to the element. &#10;&#10;$( "li" ).each(function( index ) {
+  console.log( index + ": " + $( this ).text() );
+});'></textarea>
+
+  </fieldset>
+
+  <fieldset>
+    <h2>Question 2</h2>
+    <p class="question"><strong>[1 point]</strong>
+      What is the difference between jquery find and closest functions?
+    </p>
+    <textarea placeholder="The .closest selector traverses up the DOM to find the parent that matches the conditions. &#10;&#10;The .find selector traverses down the DOM where the event occurred, that matches the conditions."></textarea>
+  </fieldset>
+
+  <fieldset>
+    <h2>Question 3</h2>
+    <p class="question"><strong>[1 point]</strong>
+      Explain and describe prepend and append functions.
+    </p>
+    <textarea placeholder="The .prepend() method inserts the specified content as the first child of each element in the jQuery collection (To insert it as the last child, use .append())."></textarea>
+  </fieldset>
+
+  <fieldset>
+    <h2>Question 4</h2>
+    <p class="question"><strong>[1 point]</strong>
+      What is the difference between jquery empty and remove functions?
+    </p>
+    <textarea placeholder="empty() method will clear or remove the contents inside an element, including the child nodes that are nested inside the parent or the selected element. Whereas the jQuery . remove() method will remove the selected element along with its contents and other nested elements (or child elements) and its contents."></textarea>
+  </fieldset>
+  <fieldset>
+    <h2>Question 5</h2>
+    <p class="question"><strong>[1 point]</strong>
+      What is the difference between jquery text and html functions?
+    </p>
+    <textarea placeholder="The .text() method gets the combined text contents of each element in the set of matched elements, including their descendants. The .html() method gets the HTML contents of the first element in the set of matched elements."></textarea>
+  </fieldset>
+
+
+</div>
+</div>
+</body>
